@@ -1,0 +1,206 @@
+<!-- <mat-toolbar class="toolbar">
+  <img src="assets/obj1.png" routerLink="" width="50" height="50" class="d-inline-block navbar-brand" alt="logo">
+  <span class="Title">SwapOn</span>
+  <div class="spacer"></div>
+
+  
+    
+    <div class="spacer"></div>
+    
+    <button mat-button [matMenuTriggerFor]="menu"><mat-icon class="icon" >account_circle</mat-icon>  </button>
+    <mat-menu class="menu" #menu="matMenu">
+  <button mat-menu-item routerLink="/profile">My Profile</button>
+  <button mat-menu-item routerLink="/myProducts">My Products</button>
+  <button mat-menu-item routerLink="/chat">My Chats</button>
+  <button mat-menu-item  routerLink="/login">Log Out</button>   
+
+</mat-menu>
+
+</mat-toolbar>
+<!-- latest upcoming original code -->
+
+<!-- <div  fxLayout="column">
+  <div  fxFlex="0vh"></div>
+  <div  fxFlex="88vh" fxLayout="row">
+    <div  *ngIf="role=='Seller'" style="background-color: chartreuse" fxFlex="27%" fxLayout="column">
+      <div fxFlex="13%" fxLayoutAlign="center center" class="chat-header" style="background-color: #383A48">
+       <div class="chatlist"> Chat List</div>
+      </div>
+      <div style="background-color: #383A48" fxFlex="87%">
+        <div class="chatname" fxlayout="column" fxLayoutAlign="space-around center" *ngFor="let user of buyersList">
+          <div fxFlex="5%"></div>
+          <div style="margin:2%;" fxFlex="95%" (click)="getBuyerChat(user.buyersChat.buyersEmailId)" >{{ user.buyersChat.buyersEmailId }}</div>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: chocolate" fxFlex="73%" fxLayout="column">
+     
+      <div class="chathead" style="background-color: #383A48" fxFlex="13%" fxlayout="row" fxLayoutAlign="center center">
+        <div fxFlex="30%" fxLayout="row">
+          <div class="chat-person" *ngIf="role=='Buyer'">{{displaySellerForBuyerScreen}}</div>
+          <div class="chat-person" *ngIf="role=='Seller'">{{displayReceiver}}</div>
+        </div>
+        <div fxFlex="60%"></div>
+        <button mat-fab routerLink="/videoService" class="sellicon" color="primary" aria-label="Example icon button with a delete icon">
+                    <mat-icon>videocam</mat-icon>
+
+                  </button>
+      </div>
+      <div  fxFlex="77.7%"  fxFlex="row">
+        <div style="background-color: #878b9b" fxLayout = "column" class="ChatBody" fxLayoutAlign="end none" fxFill>
+          <div *ngIf="role=='Seller'" class="message-item-container-send" style="display:block" >
+            <div *ngFor="let msg of displayChat" fxLayout="column" class="padding5px">
+              <div fxLayout = "row" fxLayoutAlign="end end">
+                <div class="message-content-send padding5px" *ngIf="msg.messageSendBy+'@gmail.com' == displaySender" >{{msg.message}}</div>
+              </div>
+              <div fxLayout = "row" fxLayoutAlign="start start">
+                <div class="message-content-receive padding5px" *ngIf="msg.messageSendBy+'@gmail.com' != displaySender">{{msg.message}}</div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="role=='Buyer'" class="message-item-container-send" style="display:block">
+            <div *ngFor="let msg of sellerChat" fxLayout="column" class="padding5px">
+              <div fxLayout = "row" fxLayoutAlign="end end">
+                <div class="message-content-send padding5px" *ngIf="msg.messageSendBy+'@gmail.com' == buyer" >{{msg.message}}</div>
+              </div>
+              <div fxLayout = "row" fxLayoutAlign="start start">
+                <div class="message-content-receive padding5px" *ngIf="msg.messageSendBy+'@gmail.com' != buyer">{{msg.message}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div style="background-color: rgb(169, 178, 184);" fxFlex="8.5%" fxLayout="row" >
+        <div fxFlex="95%" fxLayout="row" [formGroup]="inputMessage">
+          <div style="background-color: #878b9b" fxFlex="0.3"></div>
+          <input type="text" placeholder="enter a message" fxFlex="99.4%"  formControlName="message" matInput >
+          <div style="background-color: #878b9b" fxFlex="0.3"></div>
+        </div>
+        <div fxFlex="5%"  fxLayout="row">
+          <div *ngIf="role=='Seller'" fxLayoutAlign="center center" fxFlex="91.2">
+            <mat-icon (click)="sendMessage()">send</mat-icon>
+          </div>
+          <div *ngIf="role=='Buyer'" fxLayoutAlign="center center" fxFlex="91.2">
+            <mat-icon (click)="sendMessageBuyer()">send</mat-icon>
+          </div>
+          <div fxFlex="9" style="background-color: #878b9b"></div>
+        </div>
+      </div>
+      <div fxFlex="0.7" style="background-color: #878b9b"></div>
+    </div>
+  </div>
+  <div fxFlex="2vh" style="background-color: #555353"></div> 
+</div>    -->
+
+
+
+
+
+<mat-toolbar class="toolbar">
+  <img src="assets/obj1.png" routerLink="" width="50" height="50" class="d-inline-block navbar-brand" alt="logo">
+  <span class="Title">SwapOn</span>
+  <div class="spacer"></div>
+    <div class="spacer"></div>
+    <button mat-button [matMenuTriggerFor]="menu"><mat-icon class="icon" >account_circle</mat-icon>  </button>
+    <mat-menu class="menu" #menu="matMenu">
+  <button mat-menu-item routerLink="/profile">My Profile</button>
+  <button mat-menu-item routerLink="/myProducts">My Products</button>
+  <button mat-menu-item routerLink="/showProduct">All Products</button>
+  <button mat-menu-item routerLink="/chat">My Chats</button>
+  <button mat-menu-item  routerLink="/login">Log Out</button>
+</mat-menu>
+</mat-toolbar>
+<!-- latest upcoming original code -->
+<div  fxLayout="column">
+  <div  fxFlex="0vh"></div> <!--column1-parent-->
+  <div  fxFlex="88vh" fxLayout="row">
+    <!-- <div fxFlex="0.01%"></div> row1 -->
+    <div  *ngIf="role=='Seller'" style="background-color: chartreuse" fxFlex="27%" fxLayout="column">
+      <div fxFlex="13%" fxLayoutAlign="center center" class="chat-header" style="background-color: #383A48">
+       <div class="chatlist"> Chat List</div>
+      </div>
+      <div style="background-color: #383A48" fxFlex="87%">
+        <div class="chatname" fxlayout="column" fxLayoutAlign="space-around center" *ngFor="let user of buyersList">
+          <div fxFlex="5%"></div>
+          <div style="margin:2%;" fxFlex="95%" (click)="getBuyerChat(user.buyersChat.buyersEmailId)" >{{ user.buyersChat.buyersEmailId }}</div>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: chocolate" fxFlex="100%" fxLayout="column">
+      <div class="chathead" style="background-color: #383A48" fxFlex="13%" fxlayout="row" fxLayoutAlign="center center">
+        <div fxFlex="30%" fxLayout="row">
+          <div class="chat-person" *ngIf="role=='Buyer'">{{displaySellerForBuyerScreen}}</div>
+          <div class="chat-person" *ngIf="role=='Seller'">{{displayReceiver}}</div>
+        </div>
+        <div fxFlex="60%"></div>
+        <button mat-fab routerLink="/videoService" class="sellicon" color="primary" aria-label="Example icon button with a delete icon">
+                    <mat-icon>videocam</mat-icon>
+                  </button>
+      </div>
+      <div  fxFlex="77.7%"  fxFlex="row">
+        <div style="background-color: #878B9B" fxLayout = "column" class="ChatBody" fxLayoutAlign="end none" fxFill>
+          <div *ngIf="role=='Seller'" class="message-item-container-send" style="display:block" >
+            <div *ngFor="let msg of displayChat" fxLayout="column" class="padding5px">
+              <div fxLayout = "row" fxLayoutAlign="end end">
+                <div class="message-content-send padding5px" *ngIf="msg.messageSendBy+'@gmail.com' == displaySender" >{{msg.message}}</div>
+              </div>
+              <div fxLayout = "row" fxLayoutAlign="start start">
+                <div class="message-content-receive padding5px" *ngIf="msg.messageSendBy+'@gmail.com' != displaySender">{{msg.message}}</div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="role=='Buyer'" class="message-item-container-send" style="display:block">
+            <div *ngFor="let msg of sellerChat" fxLayout="column" class="padding5px">
+              <div fxLayout = "row" fxLayoutAlign="end end">
+                <div class="message-content-send padding5px" *ngIf="msg.messageSendBy+'@gmail.com' == buyer" >{{msg.message}}</div>
+              </div>
+              <div fxLayout = "row" fxLayoutAlign="start start">
+                <div class="message-content-receive padding5px" *ngIf="msg.messageSendBy+'@gmail.com' != buyer">{{msg.message}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background-color: rgb(169, 178, 184);" fxFlex="8.5%" fxLayout="row" >
+        <div fxFlex="95%" fxLayout="row" [formGroup]="inputMessage">
+          <div style="background-color: #878B9B" fxFlex="0.3"></div>
+          <input type="text" placeholder="enter a message" fxFlex="99.4%"  formControlName="message" matInput >
+          <div style="background-color: #878B9B" fxFlex="0.3"></div>
+        </div>
+        <div fxFlex="5%"  fxLayout="row">
+          <div *ngIf="role=='Seller'" fxLayoutAlign="center center" fxFlex="91.2">
+            <mat-icon (click)="sendMessage()">send</mat-icon>
+          </div>
+          <div *ngIf="role=='Buyer'" fxLayoutAlign="center center" fxFlex="91.2">
+            <mat-icon (click)="sendMessageBuyer()">send</mat-icon>
+          </div>
+          <div fxFlex="9" style="background-color: #878B9B"></div>
+        </div>
+      </div>
+      <div fxFlex="0.7" style="background-color: #878B9B"></div>
+    </div>
+    <!-- <div fxFlex="5%"></div> row4 -->
+  </div>
+  <div fxFlex="2vh" style="background-color: #555353"></div>
+  <!-- column2-parent -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
